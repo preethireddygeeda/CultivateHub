@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slideshow</title>
+<style>
+  /* CSS for slideshow */
+  
+  body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 2500px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+      font-size: 24px;
+      text-align: center;
+      font-style: italic;
+    }
+
+    h2 {
+      color: #280101;
+      font-size: 20px;
+    }
+
+    p {
+      color: #666;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .content {
+      display: flex;
+      align-items: left;
+    }
+
+    .content img {
+      max-width: 50%;
+      margin-right: 20px;
+    }
+
+    .navbar {
+      background-color: green;
+      overflow: hidden;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .footer {
+      background-color: green; /* Dark green background */
+      color: white;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+    }
+
+    .footer div {
+      flex: 1;
+      padding: 0 20px;
+    }
+
+    .footer div h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .footer div p, .footer div a {
+      margin: 5px 0;
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer div a:hover {
+      text-decoration: underline;
+    }
+
+    .footer .social-icons {
+      display: flex;
+      align-items: center;
+    }
+
+    .footer .social-icons a {
+      margin-right: 10px;
+    }
+
+    .footer .social-icons a img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .footer-bottom {
+      background-color: #003919; /* Darker green background */
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    .footer-bottom a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer-bottom a:hover {
+      text-decoration: underline;
+    }
+
+    /* Slideshow styles */
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    .mySlides img {
+      width: 100%;
+      height: auto;
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+</style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="#" class="logo">
+      <img src="Preview.png" alt="Logo" width="150px" height="40%">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <h1>CARBON SEQESTRATION</h1>
+  <p>______________________________________________________________________________&__________________________________________________________________________________________</p>
+
+  <div class="container">
+    <div class="slideshow-container">
+      <div class="mySlides">
+        <img src="https://geokansas.ku.edu/sites/default/files/inline-images/carbon-capture.jpg" alt="Slide 1" width="100" height="10">
+        <div class="text">Caption for Slide 1</div>
+      </div>
+      <div class="mySlides">
+        <img src="https://images.fineartamerica.com/images-medium-large/carbon-dioxide-sequestration-ornlscience-source.jpg" alt="Slide 2">
+        <div class="text">Caption for Slide 2</div>
+      </div>
+      <div class="mySlides">
+        <img src="https://www.environment.sa.gov.au/files/sharedassets/public/images/carbon-sequestration-plantings.jpg?w=1000" alt="Slide 3">
+        <div class="text">Caption for Slide 3</div>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <P>Carbon sequestration is the process of storing carbon in a carbon pool.  It plays a crucial role in limiting climate change by reducing the amount of carbon dioxide in the atmosphere. There are two main types of carbon sequestration: biologic (also called biosequestration) and geologic</P>
+
+    <div>
+        <h2>Types of Carbon Sequestration</h2>
+        <ol>
+            <li>Biological Sequestration</li>
+            <ul>
+                <li>Forests: Trees and plants absorb CO₂ during photosynthesis and store it as biomass (trunks, branches, roots, leaves).</li>
+           <li>Soils: Plants transfer carbon to soils through roots and decomposing organic matter.</li>
+           <li>Oceans: Marine organisms, such as phytoplankton, absorb CO₂ during photosynthesis. Additionally, CO₂ can dissolve directly in seawater.</li>
+        <li>Wetlands: These ecosystems store carbon in plant matter and sediments.</li></ul>
+       <li>Geological Sequestration</li>
+       <ul>
+        <li>This involves injecting CO₂ into underground rock formations, such as depleted oil and gas fields or deep saline aquifers, where it is trapped and stored long-term</li>
+       <li>Techniques include enhanced oil recovery (EOR), where CO₂ is used to extract more oil from existing fields while being stored underground.</li>
+    </ul>
+    <li>Chemical Sequestration</li>
+    <ul>
+        <li>Mineral Carbonation: This process involves reacting CO₂ with naturally occurring minerals to form stable carbonates.</li>
+        <li>Industrial Processes: Capture and storage of CO₂ from industrial sources, such as power plants and cement factories, using technologies like amine scrubbing.</li>
+    
+    </ul>
+    
+    </ol>
+    </div>
+    <br>
+    <div>
+        <h2>Methods and Technologies</h2>
+        <ol>
+            <li>Direct Air Capture (DAC)
+
+                DAC technologies extract CO₂ directly from ambient air and store it underground or use it in industrial applications.</li>
+            <li>Bioenergy with Carbon Capture and Storage (BECCS)
+
+                Combines biomass energy production with CO₂ capture and storage. Biomass absorbs CO₂ during growth, which is then captured and stored when the biomass is used for energy.</li>
+                <li>Agricultural Practices
+
+                    Techniques such as no-till farming, cover cropping, and agroforestry enhance soil carbon storage.</li>
+            </ol>
+    </div>
+    <div class="footer">
+      <div>
+        <h3>CULTIVATEHUB</h3>
+        <p>Growing together, nurturing tomorrow. At CultivateHub, we sow the seeds of innovation for a sustainable and bountiful future."</p>
+      </div>
+      <div>
+        <h3>About us</h3>
+        <p><a href="contact.html">Know More</a></p>
+      </div>
+      <div>
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="8309916906"><img src="https://tse2.mm.bing.net/th?id=OIP.l2iriNGKVRAa_y2CnQLL_AHaHp&pid=Api&P=0&h=180" alt="Phone Icon"></a>
+          <a href="https://www.instagram.com/cultive_hub?utm_source=qr&igsh=azd6ZmZidW41Z2dm"><img src="https://tse2.mm.bing.net/th?id=OIP.2spOcwGpwKFSn-ZDDhdeIgHaHd&pid=Api&P=0&h=180" alt="Instagram Icon"></a>
+        </div>
+      </div>
+      <div>
+        <h3>Call Us</h3>
+        <p>+91 8309916906</p>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      &copy; 2024 CULTIVATEHUB. All Rights Reserved. 
+      <a href="#">PRIVACY POLICY</a> | 
+      <a href="#">TERMS & CONDITIONS</a>
+    </div>
+    <script>
+      // JavaScript for slideshow
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+      }
+    </script>
+  </div>
+</body>
+</html>

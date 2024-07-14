@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Farming Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .sensor-data {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .sensor {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Farming Dashboard</h1>
+        <div class="sensor-data">
+            <div class="sensor">
+                <h2>Soil Moisture</h2>
+                <p id="soil-moisture">Loading...</p>
+            </div>
+            <div class="sensor">
+                <h2>Temperature</h2>
+                <p id="temperature">Loading...</p>
+            </div>
+            <div class="sensor">
+                <h2>Humidity</h2>
+                <p id="humidity">Loading...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simulate fetching data from IoT devices
+        function fetchSensorData() {
+            document.getElementById('soil-moisture').innerText = '25%';
+            document.getElementById('temperature').innerText = '22°C';
+            document.getElementById('humidity').innerText = '55%';
+        }
+
+        // Fetch sensor data every 5 seconds
+        setInterval(fetchSensorData, 5000);
+
+        // Initial fetch
+        fetchSensorData();
+    </script>
+</body>
+</html>

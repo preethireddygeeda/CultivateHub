@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crops Page</title>
+  <style>
+    .navbar {
+      background-color: green;
+      overflow: hidden;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .category {
+      background-color: #f1f1f1;
+      margin-bottom: 10px;
+      padding: 10px;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .category:hover {
+      background-color: #ddd;
+    }
+
+    .item-list {
+      display: none;
+      padding-left: 20px;
+      list-style-type: none;
+    }
+
+    .item-list li {
+      margin: 5px 0;
+    }
+
+    .item-list li a {
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    .item-list li a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#" class="logo">
+        <img src="Preview.png" alt="Logo" width="150px" height="40%">
+      <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="container">
+  <h1>Crops</h1>
+  <img src="https://th.bing.com/th/id/OIP.R3ngyAHViStvdm-nZvr8QQHaFj?rs=1&pid=ImgDetMain" alt="Image 1" width="250" height="200">
+  <div class="category" onclick="toggleList('fruits-list')">Fruits</div>
+  <ul id="fruits-list" class="item-list">
+    <li><a href="apple.html">Apple</a></li>
+    <li><a href="orange.html">Orange</a></li>
+    <li><a href="watermelon.html">Watermelon</a></li>
+    <li><a href="mango.html">Mango</a></li>
+    <li><a href="grapes.html">Grapes</a></li>
+    <li><a href="banana.html">Banana</a></li>
+  </ul>
+  <img src="https://th.bing.com/th/id/OIP.45SqsEvmzgaGTe0-zaP34wAAAA?w=235&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Image 1" width="250" height="200">
+  <div class="category" onclick="toggleList('vegetables-list')">Vegetables</div>
+  <ul id="vegetables-list" class="item-list">
+    <li><a href="potato.html">Potato</a></li>
+    <li><a href="brinjal.html">Brinjal</a></li>
+    <li><a href="ladyfinger.html">Ladyfinger</a></li>
+    <li><a href="turnip.html">Turnip</a></li>
+    <li><a href="carrot.html">Carrot</a></li>
+    <li><a href="tamato.html">Tomato</a></li>
+    <li><a href="cabbage.html">Cabbage</a></li>
+  </ul>
+  <img src="https://th.bing.com/th?id=OIP.pYzKgOjZK3TjCpwHYrhrcAExDM&w=305&h=204&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Image 1" width="250" height="200">
+  <div class="category" onclick="toggleList('grains-list')">Grains</div>
+  <ul id="grains-list" class="item-list">
+    <li><a href="coffee.html">Coffee</a></li>
+    <li><a href="soyabeans.html">Soybeans</a></li>
+   
+    <li><a href="wheat.html">Wheat</a></li>
+    <li><a href="rice.html">Rice</a></li>
+    <li><a href="sugarcane.html">Sugarcane</a></li>
+  </ul>
+  <img src="https://th.bing.com/th?q=Green+Leaves+Vegetables&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" alt="Image 1" width="250" height="200">
+  <div class="category" onclick="toggleList('leafy-vegetables-list')">Leafy Vegetables</div>
+  <ul id="leafy-vegetables-list" class="item-list">
+    <li><a href="fenugreek.html">Fenugreek</a></li>
+    <li><a href="mint.html">Mint</a></li>
+    <li><a href="curryleaves.html">Curry Leaves</a></li>
+    <li><a href="coriander.html">Coriander</a></li>
+    <li><a href="spinach.html">Spinach</a></li>
+  </ul>
+</div>
+
+<script>
+  function toggleList(id) {
+    var list = document.getElementById(id);
+    if (list.style.display === "none" || list.style.display === "") {
+      list.style.display = "block";
+    } else {
+      list.style.display = "none";
+    }
+  }
+</script>
+
+</body>
+</html>

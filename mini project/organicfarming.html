@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slideshow</title>
+<style>
+  /* CSS for slideshow */
+  
+  body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 2500px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+      font-size: 24px;
+      text-align: center;
+      font-style: italic;
+    }
+
+    h2 {
+      color: #280101;
+      font-size: 20px;
+    }
+
+    p {
+      color: #666;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .content {
+      display: flex;
+      align-items: left;
+    }
+
+    .content img {
+      max-width: 50%;
+      margin-right: 20px;
+    }
+
+    .navbar {
+      background-color: green;
+      overflow: hidden;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .footer {
+      background-color: green; /* Dark green background */
+      color: white;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+    }
+
+    .footer div {
+      flex: 1;
+      padding: 0 20px;
+    }
+
+    .footer div h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .footer div p, .footer div a {
+      margin: 5px 0;
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer div a:hover {
+      text-decoration: underline;
+    }
+
+    .footer .social-icons {
+      display: flex;
+      align-items: center;
+    }
+
+    .footer .social-icons a {
+      margin-right: 10px;
+    }
+
+    .footer .social-icons a img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .footer-bottom {
+      background-color: #003919; /* Darker green background */
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    .footer-bottom a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer-bottom a:hover {
+      text-decoration: underline;
+    }
+
+    /* Slideshow styles */
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    .mySlides img {
+      width: 100%;
+      height: auto;
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+</style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="#" class="logo">
+      <img src="Preview.png" alt="Logo" width="150px" height="40%">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <h1>ORGANIC FARMING</h1>
+  <p>______________________________________________________________________________&__________________________________________________________________________________________</p>
+
+  <div class="container">
+    <div class="slideshow-container">
+      <div class="mySlides">
+        <img src="https://www.neoadviser.com/wp-content/uploads/2019/04/OrganicProduce-e1428702141300.jpg" alt="Slide 1" width="100" height="10">
+        <div class="text"></div>
+      </div>
+      <div class="mySlides">
+        <img src="https://healthiersteps.com/wp-content/uploads/2022/02/organic-farming-benefits.jpg" alt="Slide 2">
+        <div class="text"></div>
+      </div>
+      <div class="mySlides">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.Qz82o76glGANBHZY5TRwJAHaEK&pid=Api&P=0&h=180" alt="Slide 3">
+        <div class="text"></div>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <div>
+        <p>Organic farming, sustainable agricultural system that uses ecologically based pest controls and biological fertilizers derived largely from animal and plant wastes and nitrogen-fixing cover crops. Modern organic farming was developed as a response to the environmental harm caused by the use of chemical pesticides and synthetic fertilizers in conventional agriculture, and it has numerous ecological benefits.</p>
+      <h2>Principles of Organic Farming</h2>
+      <ol>
+        <li>Biodiversity: Promoting a variety of species and natural ecosystems to enhance resilience and productivity</li>
+        <li>Sustainability: Focusing on long-term ecological balance and soil health</li>
+        <li>Natural Inputs: Using organic fertilizers, compost, green manure, and biological pest control methods.</li>
+        <li>Animal Welfare: Ensuring livestock are raised in natural conditions with organic feed and proper humane treatment.</li>
+        <li>Soil Health: Maintaining soil fertility through crop rotations, cover cropping, and reduced tillage.</li>
+      </ol>
+    </div>
+    <br>
+    <div>
+      <h2>Benefits of Organic Farming</h2>
+      <ol>
+        <li>Environmental Protection: Reduces pollution, conserves water, improves soil health, and promotes biodiversity.</li>
+        <li>Healthier Produce: Organic foods are free from synthetic pesticides and fertilizers, often containing higher levels of nutrients.</li>
+        <li>Animal Welfare: Livestock are raised in more natural and humane conditions.</li>
+        <li>Economic Benefits: Can be more profitable due to premium prices for organic products and reduced costs of synthetic inputs.</li>
+        <li>Resilience to Climate Change: Practices like crop diversity and improved soil health enhance the farm's ability to withstand climate variability.</li>
+      </ol>
+    </div>
+    <div>
+      <h2>Challenges of Organic Farming</h2>
+      <ol>
+        <li>Lower Yields: Organic farms often produce lower yields compared to conventional farms.</li>
+        <li>Labor Intensive: Requires more manual labor for tasks such as weeding and applying organic treatments.</li>
+        <li>Certification Costs: Organic certification can be costly and time-consuming for farmers.</li>
+        <li>Market Access: Organic products can be harder to market and sell, particularly in regions without strong demand.</li>
+        <li>Pest and Disease Management: Controlling pests and diseases without synthetic chemicals can be more challenging.</li>
+      </ol>
+    </div>
+    <div class="footer">
+      <div>
+        <h3>CULTIVATEHUB</h3>
+        <p>Growing together, nurturing tomorrow. At CultivateHub, we sow the seeds of innovation for a sustainable and bountiful future."</p>
+      </div>
+      <div>
+        <h3>About us</h3>
+        <p><a href="contact.html">Know More</a></p>
+      </div>
+      <div>
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="8309916906"><img src="https://tse2.mm.bing.net/th?id=OIP.l2iriNGKVRAa_y2CnQLL_AHaHp&pid=Api&P=0&h=180" alt="Phone Icon"></a>
+          <a href="https://www.instagram.com/cultive_hub?utm_source=qr&igsh=azd6ZmZidW41Z2dm"><img src="https://tse2.mm.bing.net/th?id=OIP.2spOcwGpwKFSn-ZDDhdeIgHaHd&pid=Api&P=0&h=180" alt="Instagram Icon"></a>
+        </div>
+      </div>
+      <div>
+        <h3>Call Us</h3>
+        <p>+91 8309916906</p>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      &copy; 2024 CULTIVATEHUB. All Rights Reserved. 
+      <a href="#">PRIVACY POLICY</a> | 
+      <a href="#">TERMS & CONDITIONS</a>
+    </div>
+    <script>
+      // JavaScript for slideshow
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+      }
+    </script>
+  </div>
+</body>
+</html>

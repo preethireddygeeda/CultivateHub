@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informational Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .container {
+            padding: 20px;
+        }
+        .title {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .row img {
+            max-width: 100%;
+            height: auto;
+        }
+        .left, .right {
+            flex: 1;
+            padding: 10px;
+        }
+        .left img, .right img {
+            max-width: 70%; /* Set the maximum width for the images */
+            height: auto;
+        }
+        .text-content {
+            flex: 2; /* Set flex-grow to 2 for the text content to take more space */
+            padding: 10px;
+        }
+        @media (max-width: 768px) {
+            .left, .right, .text-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+    <h1 class="title">Informational Web Page</h1>
+
+    <div class="row">
+        <div class="left">
+            <img src="https://geokansas.ku.edu/sites/default/files/inline-images/carbon-capture.jpg" alt="Placeholder Image" width="100%" height="50%">
+        </div>
+        <div class="text-content">
+            <p>This is the content that goes on the right side of the image. You can place any information you want here, such as a description, details, or any relevant text.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="text-content">
+            <p>This is the content that goes on the left side of the image. You can place any information you want here, such as a description, details, or any relevant text.</p>
+        </div>
+        <div class="right">
+            <img src="https://geokansas.ku.edu/sites/default/files/inline-images/carbon-capture.jpg" alt="Placeholder Image">
+        </div>
+    </div>
+</div>
+
+<footer>
+    &copy; 2024 Your Company Name. All rights reserved.
+</footer>
+
+</body>
+</html>

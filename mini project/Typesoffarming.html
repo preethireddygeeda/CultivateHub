@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <style>
+    .navbar {
+      background-color: green;
+      overflow: hidden;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: none;
+    }
+
+    .slides img {
+      width: 100%;
+      height: auto;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .image-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .image-container > div {
+      text-align: center;
+      margin: 10px;
+      width: calc(33.333% - 20px); /* Adjust width for three images per row */
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .footer {
+      background-color: green; /* Dark green background */
+      color: white;
+      padding: 20px 0;
+      display:flex;
+      justify-content: space-around;
+      align-items: flex-start;
+    }
+
+    .footer div {
+      flex: 1;
+      padding: 0 20px;
+    }
+
+    .footer div h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .footer div p, .footer div a {
+      margin: 5px 0;
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer div a:hover {
+      text-decoration: underline;
+    }
+
+    .footer .social-icons {
+      display: flex;
+      align-items: center;
+    }
+
+    .footer .social-icons a {
+      margin-right: 10px;
+    }
+
+    .footer .social-icons a img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .footer-bottom {
+      background-color: #003919; /* Darker green background */
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    .footer-bottom a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer-bottom a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="#" class="logo">
+    <img src="Preview.png" alt="Logo" width="150px" height="40%">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<br>
+<h1>TYPES OF FARMING </h1>
+
+<div class="image-container">
+  <div>
+    <img src="https://tse2.mm.bing.net/th?id=OIP.5jB8WxNVdmCvnXbsw1FvtgHaEI&pid=Api&P=0&h=180" alt="Image 1" width="250" height="200">
+    <div class="button-container">
+      <button class="button" onclick="location.href='complimentaryfarming.html'">COMPLIMENTARY FARMING</button>
+    </div>
+  </div>
+  <div>
+    <img src="https://tse4.mm.bing.net/th?id=OIP.Xx5o3ajRhC7j8j67GpKNVgHaEK&pid=Api&P=0&h=180" alt="Image 1" width="250" height="200">
+    <div class="button-container">
+      <button class="button" onclick="location.href='croprotation.html'">CROP ROTATION</button>
+    </div>
+  </div>
+  <div>
+    <img src="https://tse2.mm.bing.net/th?id=OIP.F8Ay0Pquq3KCZyDRAeOQoQHaE6&pid=Api&P=0&h=180" alt="Image 1" width="250" height="200">
+    <div class="button-container">
+      <button class="button" onclick="location.href='dairyfarming.html'">DAIRY FARMING</button>
+    </div>
+  </div>
+  <div>
+    <img src="http://www.histoirdefrance.fr/encyclopedie/geographie/images/dry_farming2.jpg" alt="Image 1" width="250" height="200">
+    <div class="button-container">
+      <button class="button" onclick="location.href='dryfarming.html'">DRY FARMING</button>
+    </div>
+  </div>
+  <div>
+    <img src="https://tse2.mm.bing.net/th?id=OIP.S0W9mxkQbeFcH-ZYNDn-qgHaEF&pid=Api&P=0&h=180" alt="Image 1" width="250" height="200">
+    <div class="button-container">
+      <button class="button" onclick="location.href='industrialfarming.html'">INDUSTRIAL FARMING</button>
+    </div>
+  </div>
+  <div>
+    <img src="https://thumbs.dreamstime.com/z/subsistence-farmer-ploughing-paddy-field-india-chettinad-district-tamil-nadu-region-southern-219408272.jpg" alt="Image 1" width="250" height="200">
+    <div class="button-container">
+      <button class="button" onclick="location.href='subsistence.html'">SUBSISTENCE FARMING</button>
+    </div>
+  </div>
+  <div>
+    <img src="https://tse4.mm.bing.net/th?id=OIP.x5zf-aCXun_HyyLwj6xFtAHaFj&pid=Api&P=0&h=180" alt="Image 1" width="250" height="200">
+    <div class="button-container">
+      <button class="button" onclick="location.href='commercial.html'">COMMERCIAL AGRICULTURE</button>
+    </div>
+  </div>
+  <div>
+    <img src="https://tse2.mm.bing.net/th?id=OIP.AtmNTquCy8X9K9at_41KUAHaDU&pid=Api&P=0&h=180" alt="Image 1" width="250" height="200">
+    <div class="button-container">
+      <button class="button" onclick="location.href='precision.html'">PRECISION AGRICULTURE</button>
+    </div>
+  </div>
+  <div>
+    <img src="https://tse3.mm.bing.net/th?id=OIP.cfs2jxVlXrHtQcb1Un7HgAHaDb&pid=Api&P=0&h=180" alt="Image 1" width="250" height="200">
+    <div class="button-container">
+      <button class="button" onclick="location.href='plantation.html'">PLANTATION AGRICULTURE</button>
+    </div>
+  </div>
+  <div>
+    <img src="https://tse3.mm.bing.net/th?id=OIP.By8FrsIRgd_U8MHT6Ce8IwHaE7&pid=Api&P=0&h=180" alt="Image 1" width="250" height="200">
+    <div class="button-container">
+      <button class="button" onclick="location.href='mixed.html'">MIXED FARMING</button>
+    </div>
+  </div>
+  <div>
+    <img src="https://i.ytimg.com/vi/BMVMKI43Pxg/hqdefault.jpg" alt="Image 1" width="250" height="200">
+    <div class="button-container">
+      <button class="button" onclick="location.href='multiple.html'">MULTIPLE FARMING</button>
+    </div>
+  </div>
+  <div>
+    <img src="https://tse1.mm.bing.net/th?id=OIP.a8hb741gEdzPpgTMN4hZiQHaDx&pid=Api&P=0&h=180" alt="Image 1" width="250" height="200">
+    <div class="button-container">
+      <button class="button" onclick="location.href='nomadic.html'">NOMADIC FARMING</button>
+    </div>
+  </div>
+  
+  
+</div>
+
+
+
+<div class="footer">
+  <div>
+    <h3>CULTIVATEHUB</h3>
+    <p>Growing together, nurturing tomorrow. At CultivateHub, we sow the seeds of innovation for a sustainable and bountiful future."</p>
+  </div>
+  <div>
+    <h3>About us</h3>
+    <p><a href="#">Know More</a></p>
+  </div>
+  <div>
+    <h3>Follow Us</h3>
+    <div class="social-icons">
+      <a href="8309916906"><img src="https://tse2.mm.bing.net/th?id=OIP.l2iriNGKVRAa_y2CnQLL_AHaHp&pid=Api&P=0&h=180" alt="Phone Icon"></a>
+      <a href="https://www.instagram.com/cultive_hub?utm_source=qr&igsh=azd6ZmZidW41Z2dm"><img src="https://tse2.mm.bing.net/th?id=OIP.2spOcwGpwKFSn-ZDDhdeIgHaHd&pid=Api&P=0&h=180" alt="Instagram Icon"></a>
+    </div>
+  </div>
+  <div>
+    <h3>Call Us</h3>
+    <p>+91 8309916906</p>
+  </div>
+</div>
+
+<div class="footer-bottom">
+  &copy; 2024 CULTIVATEHUB. All Rights Reserved. 
+  <a href="#">PRIVACY POLICY</a> | 
+  <a href="#">TERMS & CONDITIONS</a>
+</div>
+
+
+</body>
+</html>

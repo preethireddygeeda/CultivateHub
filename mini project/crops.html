@@ -1,0 +1,67 @@
+
+
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="styles.css">
+      <title>Home Page</title>
+  </head>
+  <body>
+      <!-- Other content -->
+      <div class="container">
+          <div class="section">
+              <h2 class="title">Crop Recommendation System 🌱</h2>
+              <button onclick="showCropRecommendation()"> GET RECOMMENDATION ABOUT CROPS </button>
+              <br><br><br>
+              <div id="crop-recommendation" style="display: none;">
+                  <form id="crop-form">
+                      <div class="row">
+                          <div class="col-md-4 form-group">
+                              <label for="nitrogen">Nitrogen</label>
+                              <input type="number" class="form-control" id="nitrogen" name="nitrogen" placeholder="Enter Nitrogen">
+                          </div>
+                          <div class="col-md-4 form-group">
+                              <label for="phosphorus">Phosphorus</label>
+                              <input type="number" class="form-control" id="phosphorus" name="phosphorus" placeholder="Enter Phosphorus">
+                          </div>
+                          <div class="col-md-4 form-group">
+                              <label for="potassium">Potassium</label>
+                              <input type="number" class="form-control" id="potassium" name="potassium" placeholder="Enter Potassium">
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-4 form-group">
+                              <label for="temperature">Temperature</label>
+                              <input type="number" class="form-control" id="temperature" name="temperature" placeholder="Enter Temperature">
+                          </div>
+                          <div class="col-md-4 form-group">
+                              <label for="humidity">Humidity</label>
+                              <input type="number" class="form-control" id="humidity" name="humidity" placeholder="Enter Humidity in %">
+                          </div>
+                          <div class="col-md-4 form-group">
+                              <label for="ph">pH</label>
+                              <input type="number" class="form-control" id="ph" name="ph" placeholder="Enter pH value">
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-4 form-group">
+                              <label for="rainfall">Rainfall</label>
+                              <input type="number" class="form-control" id="rainfall" name="rainfall" placeholder="Enter Rainfall">
+                          </div>
+                      </div>
+                      <button type="button" onclick="getRecommendation()">Prediction</button>
+                  </form>
+                  <div id="output"></div>
+              </div>
+          </div>
+          <!-- Other sections -->
+      </div>
+      <script src="styles.js"></script>
+  </body>
+  </html>
+  
+
